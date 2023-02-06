@@ -103,9 +103,9 @@ class World():
 #         return p2 = random.choice(my_world.agent_set)
         
 
-my_world = World(1, 1000, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(2, 50, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
 my_world.create_agent_set()
-
+df_list=[]
 
 
 def game(p1, p2):
@@ -168,118 +168,119 @@ def game(p1, p2):
 
 
 
-
-for t in range(my_world.time):
-    # print(t)
-    # if t == 5: 
-    #     a = 1
-    for n in range(my_world.agent_number):
-        
-        p1 = my_world.agent_set[n]
-        choice = random.choices([0,1], weights = (my_world.rate_list, 1-my_world.rate_list))
-    
-
-        # create a list of keys and a list of weights
-        keys = list(p1.coop_dict.keys())
-        weights = list(p1.coop_dict.values())
-        
-        ordered_agents_strat = sorted(my_world.agent_set, key = lambda x: x.strategy, reverse = True)
-
-        
-        
-        
-        if choice == [0] and len(p1.coop_dict) > 0:
-            p2 = random.choices(keys, weights=weights, k=1)[0]    
-            game(p1, p2)
-
-
-
-
-
-                                   #### random.choice(my_world.agent_set) #p2 = random.choice(p1.coop_list)    
-        else:
-            p2 = random.choice(my_world.agent_set)
+for j in range(my_world.run_nums):
+    for t in range(my_world.time):
+        # print(t)
+        # if t == 5: 
+        #     a = 1
+        for n in range(my_world.agent_number):
             
-            game(p1, p2)
-                    
-        d1 = p1.coop_dict
-        dict_sum = 0
-        if len(d1) > 0: 
-            for key, value in d1.items():
-                dict_sum += value
-            dict_avg = dict_sum / len(d1)
-        
-        if  t>50: #p1.strategy >0.6 and
-            for key, value in d1.items():
-                if value > dict_avg:
-                    d2 = key.coop_dict
-                    for key2, value2 in d1.items():
-                        if key2 != key and value2 > dict_avg:#and key2.strategy > 0.7 :# and key2 not in p1.coop_list:
-                            if key2 in d2:
-                                d2[key2] += 1
-                            else:
-                                d2[key2] = 1
-            
-        
-        
-        
-        
-                # if p1.strategy > 0.75:
-                #     for i in range(50):
-                #         v = ordered_agents_strat[-1] 
-                #         if v  in p1.coop_dict:
-                #             p1.coop_dict[v] += 1
-                #         else:
-                #             p1.coop_dict[v] = 1
-
-            
-        # p3 = random.choice(my_world.agent_set)                
-        # if p1 != p3:
-        #     p3.coop_list += p1.coop_list
-    
-    for agent in my_world.agent_set:
-        random.choices(my_world.agent_set)
-        
-    tuple_list = []
-    for i in range(len(my_world.agent_set)):
-        tuple_list.append([my_world.agent_set[i],my_world.agent_set[i].payoff, my_world.agent_set[i].strategy])
-        
-    if (t % 5) == 0:    
-        for ag in range(10):
-            poff_array = np.array(tuple_list)
-            poff_col = poff_array[:,1]
-            poff_min = np.min(poff_col)
-            adj_poff = poff_col + abs(poff_min)        
-            poff_sum = np.sum(adj_poff)
-            adj_poff = adj_poff/poff_sum 
-            
-            poff_max = np.max(poff_col)
-            adj_poff_vic = - (poff_col - abs(poff_max))
-            poff_sum_vic = np.sum(adj_poff_vic)
-            adj_poff_vic = adj_poff_vic/poff_sum_vic 
-            
-            replicant = random.choices(poff_array[:,0], adj_poff)    
-            victim = random.choices(poff_array[:,0], adj_poff_vic)
-            
-            victim[0].strategy = replicant[0].strategy + random.uniform(-0.05 , 0.05)
-            victim[0].coop_dict = {}
-            
-            for i in range(len(my_world.agent_set)):
-                if victim[0] in my_world.agent_set[i].coop_dict:
-                    del my_world.agent_set[i].coop_dict[victim[0]]
-            
-      #      my_world.agent_set[victim].strategy = my_world.agent_set[victim].strategy + random.uniform(-0.1 , 0.1)
-            if victim[0].strategy < 0:
-                victim[0].strategy = 0
-            elif victim[0].strategy > 1:
-                victim[0].strategy = 1
+            p1 = my_world.agent_set[n]
+            choice = random.choices([0,1], weights = (my_world.rate_list, 1-my_world.rate_list))
         
     
+            # create a list of keys and a list of weights
+            keys = list(p1.coop_dict.keys())
+            weights = list(p1.coop_dict.values())
+            
+            ordered_agents_strat = sorted(my_world.agent_set, key = lambda x: x.strategy, reverse = True)
     
-    my_world.tick += 1
-    my_world.char_df_creation()
+            
+            
+            
+            if choice == [0] and len(p1.coop_dict) > 0:
+                p2 = random.choices(keys, weights=weights, k=1)[0]    
+                game(p1, p2)
     
-df = my_world.char_df
+    
+    
+    
+    
+                                       #### random.choice(my_world.agent_set) #p2 = random.choice(p1.coop_list)    
+            else:
+                p2 = random.choice(my_world.agent_set)
+                
+                game(p1, p2)
+                        
+            d1 = p1.coop_dict
+            dict_sum = 0
+            if len(d1) > 0: 
+                for key, value in d1.items():
+                    dict_sum += value
+                dict_avg = dict_sum / len(d1)
+            
+            if  t>50: #p1.strategy >0.6 and
+                for key, value in d1.items():
+                    if value > dict_avg:
+                        d2 = key.coop_dict
+                        for key2, value2 in d1.items():
+                            if key2 != key and value2 > dict_avg:#and key2.strategy > 0.7 :# and key2 not in p1.coop_list:
+                                if key2 in d2:
+                                    d2[key2] += 1
+                                else:
+                                    d2[key2] = 1
+                
+            
+            
+            
+            
+                    # if p1.strategy > 0.75:
+                    #     for i in range(50):
+                    #         v = ordered_agents_strat[-1] 
+                    #         if v  in p1.coop_dict:
+                    #             p1.coop_dict[v] += 1
+                    #         else:
+                    #             p1.coop_dict[v] = 1
+    
+                
+            # p3 = random.choice(my_world.agent_set)                
+            # if p1 != p3:
+            #     p3.coop_list += p1.coop_list
+        
+        for agent in my_world.agent_set:
+            random.choices(my_world.agent_set)
+            
+        tuple_list = []
+        for i in range(len(my_world.agent_set)):
+            tuple_list.append([my_world.agent_set[i],my_world.agent_set[i].payoff, my_world.agent_set[i].strategy])
+            
+        if (t % 5) == 0:    
+            for ag in range(10):
+                poff_array = np.array(tuple_list)
+                poff_col = poff_array[:,1]
+                poff_min = np.min(poff_col)
+                adj_poff = poff_col + abs(poff_min)        
+                poff_sum = np.sum(adj_poff)
+                adj_poff = adj_poff/poff_sum 
+                
+                poff_max = np.max(poff_col)
+                adj_poff_vic = - (poff_col - abs(poff_max))
+                poff_sum_vic = np.sum(adj_poff_vic)
+                adj_poff_vic = adj_poff_vic/poff_sum_vic 
+                
+                replicant = random.choices(poff_array[:,0], adj_poff)    
+                victim = random.choices(poff_array[:,0], adj_poff_vic)
+                
+                victim[0].strategy = replicant[0].strategy + random.uniform(-0.05 , 0.05)
+                victim[0].coop_dict = {}
+                
+                for i in range(len(my_world.agent_set)):
+                    if victim[0] in my_world.agent_set[i].coop_dict:
+                        del my_world.agent_set[i].coop_dict[victim[0]]
+                
+          #      my_world.agent_set[victim].strategy = my_world.agent_set[victim].strategy + random.uniform(-0.1 , 0.1)
+                if victim[0].strategy < 0:
+                    victim[0].strategy = 0
+                elif victim[0].strategy > 1:
+                    victim[0].strategy = 1
+    
+            
+        
+        
+        my_world.tick += 1
+        my_world.char_df_creation()
+        df_in = my_world.char_df.append(df_list)
+df = pd.concat(df_list).groupby('Agent').mean()
 mean_strat = df.groupby('Time')['Strat'].mean()
 mean_strat.plot()
 plt.xlabel('Time')
