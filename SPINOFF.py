@@ -16,9 +16,7 @@ import math
 from random import choices
 
 
-seed_number = 1   #4 3 2 0 no 1 
-np.random.seed(seed_number)   
-seed(seed_number)
+
 class Agent():
     def __init__(self, agent_id): 
         self.agent_id = agent_id
@@ -44,6 +42,7 @@ class World():
         self.payoff = 0
         self.list_of_dict = []
         self.tick = 0
+        self.run = 0
         
         
     def create_agent_set(self):
@@ -58,7 +57,8 @@ class World():
                               'Agent':agent.agent_id,   
                              'Strat':agent.strategy,
                              'Payoff':agent.payoff,
-                             'Coop_list':agent.coop_dict}
+                             'Run':self.run}
+                             #'Coop_list':agent.coop_dict}
             self.list_of_dict.append(self.char_dict) 
         self.char_df = pd.DataFrame(self.list_of_dict)
 
@@ -103,9 +103,7 @@ class World():
 #         return p2 = random.choice(my_world.agent_set)
         
 
-my_world = World(2, 50, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
-my_world.create_agent_set()
-df_list=[]
+
 
 
 def game(p1, p2):
@@ -165,14 +163,19 @@ def game(p1, p2):
         
                 
 
+my_world = World(2, 50, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
+
+df_result = pd.DataFrame()
 
 
-
-for j in range(my_world.run_nums):
+for ju in range(my_world.run_nums):
+    seed_number = ju   #4 3 2 0 no 1 
+    np.random.seed(seed_number)   
+    seed(seed_number)
+    my_world.create_agent_set()
+    
     for t in range(my_world.time):
-        # print(t)
-        # if t == 5: 
-        #     a = 1
+
         for n in range(my_world.agent_number):
             
             p1 = my_world.agent_set[n]
@@ -275,12 +278,17 @@ for j in range(my_world.run_nums):
                     victim[0].strategy = 1
     
             
+        my_world.tick += 1 
+    
+        if t == 0 or (t+1) % 50 == 0:
+            my_world.char_df_creation()
+            df = my_world.char_df
+            
+        my_world.run += 1
         
         
-        my_world.tick += 1
-        my_world.char_df_creation()
-        df_in = my_world.char_df.append(df_list)
-df = pd.concat(df_list).groupby('Agent').mean()
+            
+
 mean_strat = df.groupby('Time')['Strat'].mean()
 mean_strat.plot()
 plt.xlabel('Time')
