@@ -163,17 +163,24 @@ def game(p1, p2):
         
                 
 
-my_world = World(2, 50, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(100, 2000, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
 
 df_result = pd.DataFrame()
 
+df_list = []
 
-for ju in range(my_world.run_nums):
-    seed_number = ju   #4 3 2 0 no 1 
+for seeds in range(my_world.run_nums):
+    seed_number = seeds   #4 3 2 0 no 1 
     np.random.seed(seed_number)   
     seed(seed_number)
-    my_world.create_agent_set()
+
+    my_world.tick = 0
+   # my_world.char_dict = {}   
+    my_world.agent_set = []
     
+    my_world.create_agent_set()
+                              
+        
     for t in range(my_world.time):
 
         for n in range(my_world.agent_number):
@@ -283,10 +290,9 @@ for ju in range(my_world.run_nums):
         if t == 0 or (t+1) % 50 == 0:
             my_world.char_df_creation()
             df = my_world.char_df
-            
-        my_world.run += 1
-        
-        
+            df_list.append(df)
+    my_world.run += 1
+    
             
 
 mean_strat = df.groupby('Time')['Strat'].mean()
