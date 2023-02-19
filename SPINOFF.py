@@ -163,7 +163,7 @@ def game(p1, p2):
         
                 
 
-my_world = World(1, 1000, 5, 1000, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(1, 2000, 5, 100, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
 
 df_result = pd.DataFrame()
 
