@@ -14,6 +14,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import math 
 from random import choices
+import pickle
 
 
 
@@ -57,8 +58,8 @@ class World():
                               'Agent':agent.agent_id,   
                              'Strat':agent.strategy,
                              'Payoff':agent.payoff,
-                             'Run':self.run}
-                             #'Coop_list':agent.coop_dict}
+                             'Run':self.run,
+                             'Coop_list':agent.coop_dict}
             self.list_of_dict.append(self.char_dict) 
         self.char_df = pd.DataFrame(self.list_of_dict)
 
@@ -163,7 +164,7 @@ def game(p1, p2):
         
                 
 
-my_world = World(1, 2000, 5, 100, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(1, 1000, 5, 50, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
 
 df_result = pd.DataFrame()
 
