@@ -26,6 +26,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv("my_data_with_dict.csv") 
 
 df_2 = df[df['Time'] == 2000]
+df_time = df[df['Time'] == 2000]
 
 
 df_2 = df_2[['Agent', 'Coop_list']]
@@ -38,9 +39,11 @@ for i in range(len(df_3['Coop_list'])):
     for ju in range(len(df_3['Coop_list'][i])):
             df_3['Coop_list'][i][ju] = df_3['Coop_list'][i][ju].split(":")
             df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace('{','')
+            df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace('Agent','')
             df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace(' ','')
             df_3['Coop_list'][i][ju][1] = df_3['Coop_list'][i][ju][1].replace('}','')
- 
+
+df_3['Agent'] = df_3['Agent'].apply(str)
 for i in range(len(df_3['Coop_list'])):
     for ju in range(len(df_3['Coop_list'][i])):
         df_3['Coop_list_dict'][i][df_3['Coop_list'][i][ju][0]] = int(df_3['Coop_list'][i][ju][1])
@@ -56,18 +59,17 @@ for _, row in df_3.iterrows():
         G.add_edge(node_id, connected_node, weight=weight)
         
 
-nx.info(G)
+# nx.info(G)
         
 degree_counts = nx.degree_histogram(G)
 print("Degree distribution:", degree_counts)
 
-clustering_coefficient = nx.average_clustering(G)
-print("Average clustering coefficient:", clustering_coefficient)
+# clustering_coefficient = nx.average_clustering(G)
+# print("Average clustering coefficient:", clustering_coefficient)
 
-print(type(G))
+# print(type(G))
 
-# shortest_paths = dict(nx.shortest_path(G))
-# print("Shortest paths:", shortest_paths)
+
 
 # #Drawing
 # pos = nx.spring_layout(G)
