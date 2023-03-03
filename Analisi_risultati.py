@@ -67,17 +67,20 @@ y10 = mean_strat_9.plot(kind='line', y='mean', label = '90%')
 
 plt.xlabel('Time')
 plt.ylabel('Mean Cooperation Score')
-plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
-y1.plot()
-y2.plot()
-y3.plot()
-y4.plot()
-y5.plot()
-y6.plot()
-y7.plot()
-y8.plot()
-y9.plot()
-y10.plot()
+
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), )
+y10.plot(color = 'blue')
+y9.plot(color = 'blue')
+y8.plot(color = 'blue')
+y7.plot(color = 'blue')
+y6.plot(color = 'blue')
+y5.plot(color = 'blue')
+y4.plot(color = 'blue')
+y3.plot(color = 'blue')
+y2.plot(color = 'blue')
+y1.plot(color = 'blue')
+
+
 plt.show()
 
 

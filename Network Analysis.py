@@ -23,13 +23,16 @@ import matplotlib.pyplot as plt
 #         s = s.split(",")
 
 
-df = pd.read_csv("my_data_with_dict.csv") 
+df = pd.read_csv("multi_run_100_agents_80.csv") 
 
+run = 2
+
+df = df[df['Run']==run]
 df_2 = df[df['Time'] == 2000]
-df_time = df[df['Time'] == 2000]
 
 
-df_2 = df_2[['Agent', 'Coop_list']]
+
+df_2 = df_2[['Agent', 'Coop_list', 'Strat']]
 
 df_2['Coop_list'] = df['Coop_list'].str.split(",")
 df_2['Coop_list_dict'] = pd.Series([None] * len(df['Coop_list']), dtype=object)
@@ -57,6 +60,12 @@ for _, row in df_3.iterrows():
     node_connections = row['Coop_list_dict']
     for connected_node, weight in node_connections.items():
         G.add_edge(node_id, connected_node, weight=weight)
+
+
+for i in range(len(df_3['Strat'])):
+    for node in G.nodes:
+        if int(node) == i:
+            G.nodes[node]['strat'] = df_3['Strat'][i]
         
 
 # nx.info(G)
