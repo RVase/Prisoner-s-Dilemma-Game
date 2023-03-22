@@ -6,506 +6,607 @@
   <graph defaultedgetype="directed" mode="static" name="">
     <attributes class="node" mode="static">
       <attribute id="0" title="strat" type="float" />
+      <attribute id="1" title="payoff" type="int" />
     </attributes>
     <nodes>
       <node id="0" label="0">
         <attvalues>
           <attvalue for="0" value="0.6824137087556998" />
+          <attvalue for="1" value="23377" />
         </attvalues>
       </node>
       <node id="89" label="89">
         <attvalues>
           <attvalue for="0" value="0.7118167073876788" />
+          <attvalue for="1" value="12392" />
         </attvalues>
       </node>
       <node id="74" label="74">
         <attvalues>
           <attvalue for="0" value="0.7618932662555862" />
+          <attvalue for="1" value="12094" />
         </attvalues>
       </node>
       <node id="45" label="45">
         <attvalues>
           <attvalue for="0" value="0.6440866188279025" />
+          <attvalue for="1" value="9330" />
         </attvalues>
       </node>
       <node id="80" label="80">
         <attvalues>
           <attvalue for="0" value="0.6409996944297883" />
+          <attvalue for="1" value="9651" />
         </attvalues>
       </node>
       <node id="28" label="28">
         <attvalues>
           <attvalue for="0" value="0.4477093765517461" />
+          <attvalue for="1" value="8398" />
         </attvalues>
       </node>
       <node id="83" label="83">
         <attvalues>
           <attvalue for="0" value="0.6786372174430852" />
+          <attvalue for="1" value="10491" />
         </attvalues>
       </node>
       <node id="8" label="8">
         <attvalues>
           <attvalue for="0" value="0.5223752648653786" />
+          <attvalue for="1" value="9368" />
         </attvalues>
       </node>
       <node id="71" label="71">
         <attvalues>
           <attvalue for="0" value="0.6361092803691566" />
+          <attvalue for="1" value="9659" />
         </attvalues>
       </node>
       <node id="25" label="25">
         <attvalues>
           <attvalue for="0" value="0.6791555020816961" />
+          <attvalue for="1" value="11102" />
         </attvalues>
       </node>
       <node id="56" label="56">
         <attvalues>
           <attvalue for="0" value="0.6058061355096429" />
+          <attvalue for="1" value="9752" />
         </attvalues>
       </node>
       <node id="44" label="44">
         <attvalues>
           <attvalue for="0" value="0.6617140356120146" />
+          <attvalue for="1" value="8715" />
         </attvalues>
       </node>
       <node id="39" label="39">
         <attvalues>
           <attvalue for="0" value="0.7081141249691877" />
+          <attvalue for="1" value="12276" />
         </attvalues>
       </node>
       <node id="40" label="40">
         <attvalues>
           <attvalue for="0" value="0.5786261236672419" />
+          <attvalue for="1" value="9075" />
         </attvalues>
       </node>
       <node id="61" label="61">
         <attvalues>
           <attvalue for="0" value="0.710133987366418" />
+          <attvalue for="1" value="15035" />
         </attvalues>
       </node>
       <node id="81" label="81">
         <attvalues>
           <attvalue for="0" value="0.7190482484315538" />
+          <attvalue for="1" value="9870" />
         </attvalues>
       </node>
       <node id="37" label="37">
         <attvalues>
           <attvalue for="0" value="0.5177964801652924" />
+          <attvalue for="1" value="9199" />
         </attvalues>
       </node>
       <node id="52" label="52">
         <attvalues>
           <attvalue for="0" value="0.6672202462613734" />
+          <attvalue for="1" value="8844" />
         </attvalues>
       </node>
       <node id="66" label="66">
         <attvalues>
           <attvalue for="0" value="0.6346784270438948" />
+          <attvalue for="1" value="9473" />
         </attvalues>
       </node>
       <node id="94" label="94">
         <attvalues>
           <attvalue for="0" value="0.598439519243526" />
+          <attvalue for="1" value="8229" />
         </attvalues>
       </node>
       <node id="62" label="62">
         <attvalues>
           <attvalue for="0" value="0.611879200196835" />
+          <attvalue for="1" value="8259" />
         </attvalues>
       </node>
       <node id="87" label="87">
         <attvalues>
           <attvalue for="0" value="0.6615322472146079" />
+          <attvalue for="1" value="7873" />
         </attvalues>
       </node>
       <node id="86" label="86">
         <attvalues>
           <attvalue for="0" value="0.7372134762591551" />
+          <attvalue for="1" value="8897" />
         </attvalues>
       </node>
       <node id="95" label="95">
         <attvalues>
           <attvalue for="0" value="0.7908544150393177" />
+          <attvalue for="1" value="8911" />
         </attvalues>
       </node>
       <node id="31" label="31">
         <attvalues>
           <attvalue for="0" value="0.7658441366945204" />
+          <attvalue for="1" value="7657" />
         </attvalues>
       </node>
       <node id="5" label="5">
         <attvalues>
           <attvalue for="0" value="0.5758459571373831" />
+          <attvalue for="1" value="8441" />
         </attvalues>
       </node>
       <node id="91" label="91">
         <attvalues>
           <attvalue for="0" value="0.6888771196139052" />
+          <attvalue for="1" value="10099" />
         </attvalues>
       </node>
       <node id="55" label="55">
         <attvalues>
           <attvalue for="0" value="0.5812634508777699" />
+          <attvalue for="1" value="9896" />
         </attvalues>
       </node>
       <node id="34" label="34">
         <attvalues>
           <attvalue for="0" value="0.7452995420399066" />
+          <attvalue for="1" value="11186" />
         </attvalues>
       </node>
       <node id="54" label="54">
         <attvalues>
           <attvalue for="0" value="0.5394486910204654" />
+          <attvalue for="1" value="9268" />
         </attvalues>
       </node>
       <node id="32" label="32">
         <attvalues>
           <attvalue for="0" value="0.8352589546741632" />
+          <attvalue for="1" value="8969" />
         </attvalues>
       </node>
       <node id="16" label="16">
         <attvalues>
           <attvalue for="0" value="0.5060808534722343" />
+          <attvalue for="1" value="10156" />
         </attvalues>
       </node>
       <node id="1" label="1">
         <attvalues>
           <attvalue for="0" value="0.6272280304346434" />
+          <attvalue for="1" value="7839" />
         </attvalues>
       </node>
       <node id="70" label="70">
         <attvalues>
           <attvalue for="0" value="0.7438225218737731" />
+          <attvalue for="1" value="8269" />
         </attvalues>
       </node>
       <node id="29" label="29">
         <attvalues>
           <attvalue for="0" value="0.4493130788167824" />
+          <attvalue for="1" value="10767" />
         </attvalues>
       </node>
       <node id="82" label="82">
         <attvalues>
           <attvalue for="0" value="0.7099434701328854" />
+          <attvalue for="1" value="8719" />
         </attvalues>
       </node>
       <node id="42" label="42">
         <attvalues>
           <attvalue for="0" value="0.5744816531230046" />
+          <attvalue for="1" value="8353" />
         </attvalues>
       </node>
       <node id="2" label="2">
         <attvalues>
           <attvalue for="0" value="0.6417030753476529" />
+          <attvalue for="1" value="9412" />
         </attvalues>
       </node>
       <node id="63" label="63">
         <attvalues>
           <attvalue for="0" value="0.5169353950855966" />
+          <attvalue for="1" value="9063" />
         </attvalues>
       </node>
       <node id="14" label="14">
         <attvalues>
           <attvalue for="0" value="0.5869870551235449" />
+          <attvalue for="1" value="10664" />
         </attvalues>
       </node>
       <node id="85" label="85">
         <attvalues>
           <attvalue for="0" value="0.5099275430609832" />
+          <attvalue for="1" value="8979" />
         </attvalues>
       </node>
       <node id="77" label="77">
         <attvalues>
           <attvalue for="0" value="0.5412013740424351" />
+          <attvalue for="1" value="10647" />
         </attvalues>
       </node>
       <node id="3" label="3">
         <attvalues>
           <attvalue for="0" value="0.5482325800027518" />
+          <attvalue for="1" value="8877" />
         </attvalues>
       </node>
       <node id="26" label="26">
         <attvalues>
           <attvalue for="0" value="0.521794774258058" />
+          <attvalue for="1" value="9296" />
         </attvalues>
       </node>
       <node id="15" label="15">
         <attvalues>
           <attvalue for="0" value="0.7323185279045764" />
+          <attvalue for="1" value="10178" />
         </attvalues>
       </node>
       <node id="19" label="19">
         <attvalues>
           <attvalue for="0" value="0.5714140887636724" />
+          <attvalue for="1" value="9118" />
         </attvalues>
       </node>
       <node id="50" label="50">
         <attvalues>
           <attvalue for="0" value="0.5055354551497918" />
+          <attvalue for="1" value="8707" />
         </attvalues>
       </node>
       <node id="4" label="4">
         <attvalues>
           <attvalue for="0" value="0.5698152376626032" />
+          <attvalue for="1" value="8946" />
         </attvalues>
       </node>
       <node id="7" label="7">
         <attvalues>
           <attvalue for="0" value="0.7151285754918548" />
+          <attvalue for="1" value="10280" />
         </attvalues>
       </node>
       <node id="69" label="69">
         <attvalues>
           <attvalue for="0" value="0.6480553029533077" />
+          <attvalue for="1" value="8951" />
         </attvalues>
       </node>
       <node id="84" label="84">
         <attvalues>
           <attvalue for="0" value="0.7847829413029632" />
+          <attvalue for="1" value="9589" />
         </attvalues>
       </node>
       <node id="13" label="13">
         <attvalues>
           <attvalue for="0" value="0.6706906821633478" />
+          <attvalue for="1" value="10474" />
         </attvalues>
       </node>
       <node id="72" label="72">
         <attvalues>
           <attvalue for="0" value="0.7569179884374945" />
+          <attvalue for="1" value="10614" />
         </attvalues>
       </node>
       <node id="97" label="97">
         <attvalues>
           <attvalue for="0" value="0.7139939091787503" />
+          <attvalue for="1" value="9107" />
         </attvalues>
       </node>
       <node id="78" label="78">
         <attvalues>
           <attvalue for="0" value="0.6027353112089262" />
+          <attvalue for="1" value="9081" />
         </attvalues>
       </node>
       <node id="41" label="41">
         <attvalues>
           <attvalue for="0" value="0.570643307974227" />
+          <attvalue for="1" value="9682" />
         </attvalues>
       </node>
       <node id="6" label="6">
         <attvalues>
           <attvalue for="0" value="0.7364812382648827" />
+          <attvalue for="1" value="9617" />
         </attvalues>
       </node>
       <node id="93" label="93">
         <attvalues>
           <attvalue for="0" value="0.6334875580857159" />
+          <attvalue for="1" value="9247" />
         </attvalues>
       </node>
       <node id="12" label="12">
         <attvalues>
           <attvalue for="0" value="0.6211689523546821" />
+          <attvalue for="1" value="9702" />
         </attvalues>
       </node>
       <node id="36" label="36">
         <attvalues>
           <attvalue for="0" value="0.7218903302884965" />
+          <attvalue for="1" value="12293" />
         </attvalues>
       </node>
       <node id="9" label="9">
         <attvalues>
           <attvalue for="0" value="0.7294136102362729" />
+          <attvalue for="1" value="8759" />
         </attvalues>
       </node>
       <node id="49" label="49">
         <attvalues>
           <attvalue for="0" value="0.6181000140674797" />
+          <attvalue for="1" value="8442" />
         </attvalues>
       </node>
       <node id="58" label="58">
         <attvalues>
           <attvalue for="0" value="0.7425602703973558" />
+          <attvalue for="1" value="8714" />
         </attvalues>
       </node>
       <node id="27" label="27">
         <attvalues>
           <attvalue for="0" value="0.7058769671138296" />
+          <attvalue for="1" value="10317" />
         </attvalues>
       </node>
       <node id="46" label="46">
         <attvalues>
           <attvalue for="0" value="0.4882398395795444" />
+          <attvalue for="1" value="9398" />
         </attvalues>
       </node>
       <node id="76" label="76">
         <attvalues>
           <attvalue for="0" value="0.5903816538615037" />
+          <attvalue for="1" value="11701" />
         </attvalues>
       </node>
       <node id="17" label="17">
         <attvalues>
           <attvalue for="0" value="0.6337580527719974" />
+          <attvalue for="1" value="9719" />
         </attvalues>
       </node>
       <node id="60" label="60">
         <attvalues>
           <attvalue for="0" value="0.5101159644792188" />
+          <attvalue for="1" value="9306" />
         </attvalues>
       </node>
       <node id="22" label="22">
         <attvalues>
           <attvalue for="0" value="0.616884505298421" />
+          <attvalue for="1" value="9867" />
         </attvalues>
       </node>
       <node id="92" label="92">
         <attvalues>
           <attvalue for="0" value="0.4413664952572586" />
+          <attvalue for="1" value="9692" />
         </attvalues>
       </node>
       <node id="57" label="57">
         <attvalues>
           <attvalue for="0" value="0.5719316097652056" />
+          <attvalue for="1" value="10592" />
         </attvalues>
       </node>
       <node id="10" label="10">
         <attvalues>
           <attvalue for="0" value="0.6862438542787413" />
+          <attvalue for="1" value="10626" />
         </attvalues>
       </node>
       <node id="11" label="11">
         <attvalues>
           <attvalue for="0" value="0.5042042544640212" />
+          <attvalue for="1" value="11423" />
         </attvalues>
       </node>
       <node id="64" label="64">
         <attvalues>
           <attvalue for="0" value="0.7045742269797585" />
+          <attvalue for="1" value="13333" />
         </attvalues>
       </node>
       <node id="18" label="18">
         <attvalues>
           <attvalue for="0" value="0.5349771982894328" />
+          <attvalue for="1" value="9480" />
         </attvalues>
       </node>
       <node id="30" label="30">
         <attvalues>
           <attvalue for="0" value="0.5527000576678083" />
+          <attvalue for="1" value="9121" />
         </attvalues>
       </node>
       <node id="79" label="79">
         <attvalues>
           <attvalue for="0" value="0.5559627706179772" />
+          <attvalue for="1" value="9416" />
         </attvalues>
       </node>
       <node id="88" label="88">
         <attvalues>
           <attvalue for="0" value="0.542261430048284" />
+          <attvalue for="1" value="9180" />
         </attvalues>
       </node>
       <node id="59" label="59">
         <attvalues>
           <attvalue for="0" value="0.6253668712543947" />
+          <attvalue for="1" value="11389" />
         </attvalues>
       </node>
       <node id="67" label="67">
         <attvalues>
           <attvalue for="0" value="0.53515398054954" />
+          <attvalue for="1" value="8259" />
         </attvalues>
       </node>
       <node id="96" label="96">
         <attvalues>
           <attvalue for="0" value="0.4968566720525232" />
+          <attvalue for="1" value="8311" />
         </attvalues>
       </node>
       <node id="35" label="35">
         <attvalues>
           <attvalue for="0" value="0.5637773140050021" />
+          <attvalue for="1" value="8867" />
         </attvalues>
       </node>
       <node id="23" label="23">
         <attvalues>
           <attvalue for="0" value="0.5916836437930623" />
+          <attvalue for="1" value="7944" />
         </attvalues>
       </node>
       <node id="38" label="38">
         <attvalues>
           <attvalue for="0" value="0.5838761788348131" />
+          <attvalue for="1" value="9243" />
         </attvalues>
       </node>
       <node id="43" label="43">
         <attvalues>
           <attvalue for="0" value="0.6249795122725427" />
+          <attvalue for="1" value="9213" />
         </attvalues>
       </node>
       <node id="99" label="99">
         <attvalues>
           <attvalue for="0" value="0.55166295060284" />
+          <attvalue for="1" value="9144" />
         </attvalues>
       </node>
       <node id="53" label="53">
         <attvalues>
           <attvalue for="0" value="0.6812162151242146" />
+          <attvalue for="1" value="9994" />
         </attvalues>
       </node>
       <node id="20" label="20">
         <attvalues>
           <attvalue for="0" value="0.5914874313946232" />
+          <attvalue for="1" value="12102" />
         </attvalues>
       </node>
       <node id="90" label="90">
         <attvalues>
           <attvalue for="0" value="0.6266247119535874" />
+          <attvalue for="1" value="8076" />
         </attvalues>
       </node>
       <node id="21" label="21">
         <attvalues>
           <attvalue for="0" value="0.62033933797382" />
+          <attvalue for="1" value="8205" />
         </attvalues>
       </node>
       <node id="47" label="47">
         <attvalues>
           <attvalue for="0" value="0.5736796920828016" />
+          <attvalue for="1" value="8695" />
         </attvalues>
       </node>
       <node id="73" label="73">
         <attvalues>
           <attvalue for="0" value="0.5780014381740298" />
+          <attvalue for="1" value="9527" />
         </attvalues>
       </node>
       <node id="75" label="75">
         <attvalues>
           <attvalue for="0" value="0.7895758648563256" />
+          <attvalue for="1" value="8400" />
         </attvalues>
       </node>
       <node id="24" label="24">
         <attvalues>
           <attvalue for="0" value="0.7785750310223126" />
+          <attvalue for="1" value="8394" />
         </attvalues>
       </node>
       <node id="68" label="68">
         <attvalues>
           <attvalue for="0" value="0.7362359026531827" />
+          <attvalue for="1" value="9190" />
         </attvalues>
       </node>
       <node id="48" label="48">
         <attvalues>
           <attvalue for="0" value="0.4832312981936206" />
+          <attvalue for="1" value="10041" />
         </attvalues>
       </node>
       <node id="65" label="65">
         <attvalues>
           <attvalue for="0" value="0.5931736915802674" />
+          <attvalue for="1" value="8458" />
         </attvalues>
       </node>
       <node id="33" label="33">
         <attvalues>
           <attvalue for="0" value="0.5596142864044561" />
+          <attvalue for="1" value="9014" />
         </attvalues>
       </node>
       <node id="51" label="51">
         <attvalues>
           <attvalue for="0" value="0.6913931050259955" />
+          <attvalue for="1" value="8725" />
         </attvalues>
       </node>
       <node id="98" label="98">
         <attvalues>
           <attvalue for="0" value="0.5546550973588438" />
+          <attvalue for="1" value="9366" />
         </attvalues>
       </node>
     </nodes>

@@ -24,7 +24,8 @@ class Agent():
         self.strategy = 0.5 + random.uniform(-0.2 , 0.2) #np.random.normal(loc = 0.5 ,scale = 0.1) #random.uniform(0,1)
         self.payoff = 0
         self.coop_dict = {}
-        self.coop_list =[]
+        self.coop_list =[] 
+        self.record_coop_dict = {}
     #strategy tra 0 e 1 prob. di cooperare
     #payoff
     #list di cooperatori (goods)
@@ -162,9 +163,9 @@ def game(p1, p2):
             p2.payoff += 1   
     
         
-                
+rate_list = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]              
 
-my_world = World(50, 2000, 5, 100, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(1, 2000, 5, 100, 0.8) #run_nums, time, repr_rate, agent_number, rate_list
 
 df_result = pd.DataFrame()
 
@@ -189,7 +190,9 @@ for seeds in range(my_world.run_nums):
             p1 = my_world.agent_set[n]
             choice = random.choices([0,1], weights = (my_world.rate_list, 1-my_world.rate_list))
         
-    
+
+            for key in p1.coop_dict:
+                p1.record_coop_dict[p1.agent_id] = p1.coop_dict[key]
             # create a list of keys and a list of weights
             keys = list(p1.coop_dict.keys())
             weights = list(p1.coop_dict.values())
@@ -273,7 +276,7 @@ for seeds in range(my_world.run_nums):
                 victim = random.choices(poff_array[:,0], adj_poff_vic)
                 
                 victim[0].strategy = replicant[0].strategy + random.uniform(-0.05 , 0.05)
-                victim[0].coop_dict = {}
+               # victim[0].coop_dict = {}
                 
                 for i in range(len(my_world.agent_set)):
                     if victim[0] in my_world.agent_set[i].coop_dict:

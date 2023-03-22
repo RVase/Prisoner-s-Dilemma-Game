@@ -18,7 +18,7 @@ df5 = pd.read_csv('my_data_050.csv')
 df6 = pd.read_csv('my_data_060.csv')
 df7 = pd.read_csv('my_data_070.csv')
 df8 = pd.read_csv('my_data_080.csv')
-df9 = pd.read_csv('my_data_090.csv')
+df9 = pd.read_csv('100_ag_09_rl.csv')
 
 
 df =  df[df['Time'] == 1000]
@@ -58,16 +58,16 @@ data = [data_1, data_2, data_3, data_4, data_5, data_6, data_7, data_8, data_9]
 fig = plt.figure(figsize =(10, 7))
 ax = fig.add_axes([0, 0, 1, 1])
 # df['Strat'].hist()
-#df1['Strat'].hist()
-#df2['Strat'].hist()
+# df1['Strat'].hist()
+# df2['Strat'].hist()
 # df3['Strat'].hist()
 # df4['Strat'].hist()
 # df5['Strat'].hist()
 # df6['Strat'].hist()
 # df7['Strat'].hist()
-#df8['Strat'].hist()
-#df9['Strat'].hist()
+# df8['Strat'].hist()
+df9['Strat'].hist()
 
-bp = ax.boxplot(data)
+# bp = ax.boxplot(data)
 
 plt.show()

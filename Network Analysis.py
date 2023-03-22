@@ -25,14 +25,14 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("multi_run_100_agents_80.csv") 
 
-run = 2
+run = 0
 
 df = df[df['Run']==run]
-df_2 = df[df['Time'] == 2000]
+df_2 = df[df['Time'] == 1950]
 
 
 
-df_2 = df_2[['Agent', 'Coop_list', 'Strat']]
+df_2 = df_2[['Agent', 'Coop_list', 'Strat', 'Payoff']]
 
 df_2['Coop_list'] = df['Coop_list'].str.split(",")
 df_2['Coop_list_dict'] = pd.Series([None] * len(df['Coop_list']), dtype=object)
@@ -66,12 +66,10 @@ for i in range(len(df_3['Strat'])):
     for node in G.nodes:
         if int(node) == i:
             G.nodes[node]['strat'] = df_3['Strat'][i]
-        
+            G.nodes[node]['payoff'] = df_3['Payoff'][i]
 
 # nx.info(G)
         
-degree_counts = nx.degree_histogram(G)
-print("Degree distribution:", degree_counts)
 
 # clustering_coefficient = nx.average_clustering(G)
 # print("Average clustering coefficient:", clustering_coefficient)
