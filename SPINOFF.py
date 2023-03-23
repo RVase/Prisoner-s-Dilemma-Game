@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 import math 
 from random import choices
 import pickle
-
+import json
 
 
 class Agent():
@@ -26,6 +26,7 @@ class Agent():
         self.coop_dict = {}
         self.coop_list =[] 
         self.record_coop_dict = {}
+        self.name = 'Agent' + str(self.agent_id) 
     #strategy tra 0 e 1 prob. di cooperare
     #payoff
     #list di cooperatori (goods)
@@ -60,7 +61,7 @@ class World():
                              'Strat':agent.strategy,
                              'Payoff':agent.payoff,
                              'Run':self.run,
-                             'Coop_list':agent.coop_dict}
+                             'Coop_list':json.dumps(agent.record_coop_dict)}
             self.list_of_dict.append(self.char_dict) 
         self.char_df = pd.DataFrame(self.list_of_dict)
 
@@ -191,8 +192,8 @@ for seeds in range(my_world.run_nums):
             choice = random.choices([0,1], weights = (my_world.rate_list, 1-my_world.rate_list))
         
 
-            for key in p1.coop_dict:
-                p1.record_coop_dict[p1.agent_id] = p1.coop_dict[key]
+            # for key in p1.coop_dict:
+            #     p1.record_coop_dict['Agent' + str(key.agent_id)] = p1.coop_dict[key]
             # create a list of keys and a list of weights
             keys = list(p1.coop_dict.keys())
             weights = list(p1.coop_dict.values())
@@ -292,6 +293,11 @@ for seeds in range(my_world.run_nums):
         my_world.tick += 1 
     
         if t == 0 or (t+1) % 50 == 0:
+            for agent in my_world.agent_set:
+                agent.record_coop_dict = {}
+                for key in agent.coop_dict:
+                    agent.record_coop_dict[key.name] = agent.coop_dict[key]
+            
             my_world.char_df_creation()
             df = my_world.char_df
             df_list.append(df)
