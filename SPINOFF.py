@@ -166,14 +166,14 @@ def game(p1, p2):
         
 rate_list = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]              
 
-my_world = World(50, 2000, 5, 100, 0.1) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(10, 2000, 5, 100, 0.1) #run_nums, time, repr_rate, agent_number, rate_list
 
 df_result = pd.DataFrame()
 
 df_list = []
 
 for seeds in range(my_world.run_nums):
-    seed_number = seeds   #4 3 2 0 no 1 
+    seed_number = seeds  #4 3 2 0 no 1 
     np.random.seed(seed_number)   
     seed(seed_number)
 
