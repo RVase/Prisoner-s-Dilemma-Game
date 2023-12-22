@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 #         s = s.split(",")
 
 
-df = pd.read_csv("multi_run_100_agents_80.csv") 
+df = pd.read_csv('200Agents07.csv') 
 
 run = 0
 
@@ -31,20 +31,22 @@ df = df[df['Run']==run]
 df_2 = df[df['Time'] == 1950]
 
 
-
 df_2 = df_2[['Agent', 'Coop_list', 'Strat', 'Payoff']]
 
 df_2['Coop_list'] = df['Coop_list'].str.split(",")
 df_2['Coop_list_dict'] = pd.Series([None] * len(df['Coop_list']), dtype=object)
 df_3 = df_2.reset_index(drop=True)
+
+
 for i in range(len(df_3['Coop_list'])):
-    df_3['Coop_list_dict'][i] = {}
+
+    df_3['Coop_list_dict'][i] = {}    
     for ju in range(len(df_3['Coop_list'][i])):
-            df_3['Coop_list'][i][ju] = df_3['Coop_list'][i][ju].split(":")
-            df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace('{','')
-            df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace('Agent','')
-            df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace(' ','')
-            df_3['Coop_list'][i][ju][1] = df_3['Coop_list'][i][ju][1].replace('}','')
+        df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace('{','')
+        df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace('Agent','')
+        df_3['Coop_list'][i][ju][0] = df_3['Coop_list'][i][ju][0].replace(' ','')
+        df_3['Coop_list'][i][ju][1] = df_3['Coop_list'][i][ju][1].replace('}','')
+        df_3['Coop_list'][i][ju][1] = df_3['Coop_list'][i][ju][1].replace('"','')  # Added line to remove quotation marks
 
 df_3['Agent'] = df_3['Agent'].apply(str)
 for i in range(len(df_3['Coop_list'])):

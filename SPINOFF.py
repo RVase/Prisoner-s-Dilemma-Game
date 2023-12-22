@@ -164,9 +164,9 @@ def game(p1, p2):
             p2.payoff += 1   
     
         
-rate_list = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]              
+rate_list = [ 0.7]              #it-s a list if you want to iterate across multiple rate lists ad numbers to it [0.1, 0.2...]
 
-my_world = World(10, 2000, 5, 100, 0.1) #run_nums, time, repr_rate, agent_number, rate_list
+my_world = World(10, 2000, 5, 200, 0.7) #run_nums, time, repr_rate, agent_number, rate_list
 
 df_result = pd.DataFrame()
 
